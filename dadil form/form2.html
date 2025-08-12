@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ebee;
+            color: #1c1e21;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 550px;
+            background-color: #ffffff;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Bagian Header */
+        .header {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #dddfe2;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #1877f2; /* Warna biru seperti Facebook */
+        }
+        .header p {
+            margin: 4px 0 0;
+            color: #606770;
+        }
+
+        /* Bagian untuk menampilkan media */
+        .media-display {
+            padding: 16px;
+            background-color: #f0f2f5;
+        }
+        .media-display img,
+        .media-display video {
+            max-width: 100%;
+            display: block;
+            border-radius: 8px;
+            margin: 0 auto 16px auto; /* Tengahkan dan beri jarak bawah */
+        }
+
+        /* Bagian Form */
+        .form-content {
+            padding: 16px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            box-sizing: border-box; /* Wajib agar padding tidak merusak layout */
+            font-size: 16px;
+        }
+
+        /* Tombol */
+        .button-group {
+            display: flex; /* Membuat tombol sejajar */
+            gap: 10px;    /* Memberi jarak antar tombol */
+            margin-top: 20px;
+        }
+        .btn {
+            flex-grow: 1; /* Membuat tombol sama lebar */
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+        .btn-submit { background-color: #1877f2; }
+        .btn-reset { background-color: #6c757d; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <h2>Form Pendaftaran</h2>
+            <p>Cepat dan mudah.</p>
+        </div>
+        
+        <div class="media-display">
+            <img src="https://via.placeholder.com/400x200.png?text=Gambar+Anda" alt="Gambar Contoh">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+        </div>
+
+        <div class="form-content">
+            <form>
+                <input type="hidden" name="user_id" value="12345">
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="berkas">Unggah Foto Profil</label>
+                    <input type="file" id="berkas" name="foto" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="video-upload">Unggah Video Perkenalan</label>
+                    <input type="file" id="video-upload" name="video" accept="video/*">
+                </div>
+
+                <div class="button-group">
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                    <button type="submit" class="btn btn-submit">Daftar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

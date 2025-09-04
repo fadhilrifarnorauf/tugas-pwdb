@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body { font-family: Arial; background: #f4f7fb; padding: 20px; }
+    .form-group { margin-bottom: 15px; }
+    label { font-weight: bold; display: block; margin-bottom: 5px; }
+    input, select, textarea, button { padding: 6px; width: 100%; box-sizing: border-box; }
+    input[type="checkbox"], input[type="radio"] { width: auto; }
+  </style>
+</head>
+<body>
+  <h2>Formulir Pendaftaran</h2>
+  <form method="post" action="#" enctype="multipart/form-data">
+    
+    <!-- File -->
+    <div class="form-group">
+      <label>Unggah Foto</label>
+      <input type="file" name="dokumen">
+    </div>
+
+    <!-- Hidden -->
+    <input type="hidden" name="id_user" value="12345">
+
+        <!-- Textarea -->
+    <div class="form-group">
+      <label>Nama Lengkap</label>
+      <textarea name="Nama Lengkap" rows="4"></textarea>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="form-group">
+      <label>Pilih Kelas</label>
+      <input type="checkbox" name="kelas[]" value="Sepuluh"> X
+      <input type="checkbox" name="kelas[]" value="Sebelas"> IX
+      <input type="checkbox" name="kelas[]" value="Dua Belas"> XI    </div>
+
+    <!-- Radio Button -->
+    <div class="form-group">
+      <label>Jenis Kelamin</label>
+      <input type="radio" name="gender" value="L"> Laki-laki
+      <input type="radio" name="gender" value="P"> Perempuan
+    </div>
+
+    <!-- Select -->
+    <div class="form-group">
+      <label>Pilih Jurusan </label>
+      <select name="kota">
+        <option value="rpl">PPLG</option>
+        <option value="tkj">TJKT</option>
+        <option value="akt">AKUNTANSI</option>
+      </select>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="password">
+    </div>
+
+    <!-- Button biasa -->
+    <div class="form-group">
+      <input type="button" value="yo!!" onclick="alert('Tombol button ditekan!')">
+    </div>
+
+    <!-- Submit & Reset -->
+    <div class="form-group">
+      <input type="submit" value="Kirim Data">
+      <input type="reset" value="Reset Form">
+    </div>
+  </form>
+</body>
+</html>
